@@ -29,46 +29,48 @@ class Home extends StatelessWidget {
         title: const Text('Example 1'),
         backgroundColor: Color.fromARGB(255, 72, 128, 102),
       ),
-      body: const Column(
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image(
-                image: AssetImage('hubble.jpeg'),
-                height: 200,
-                width: 200,
-              ),
-            ],
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 10),
-            child: GroupButton(),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 10),
-            child: GroupButton(),
-          ),
-          Row(
-            children: <Widget>[
-              SizedBox(width: 10),
-              Text('Email :'),
-              Expanded(
-                child: Center(
-                  child: SizedBox(
-                    width: 200,
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border: UnderlineInputBorder(),
+      body: const SingleChildScrollView(
+        child: Column( 
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image(
+                  image: AssetImage('hubble.jpeg'),
+                  height: 200,
+                  width: 200,
+                ),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: GroupButton(),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: GroupButton(),
+            ),
+            Row(
+              children: <Widget>[
+                SizedBox(width: 10),
+                Text('Email :'),
+                Expanded(
+                  child: Center(
+                    child: SizedBox(
+                      width: 200,
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          border: UnderlineInputBorder(),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              )
-            ],
-          )
-        ],
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
